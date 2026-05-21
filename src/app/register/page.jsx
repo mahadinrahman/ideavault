@@ -4,6 +4,7 @@ import { Check } from "@gravity-ui/icons";
 import { Button, Description, FieldError, Form, Input, Label, TextField } from "@heroui/react";
 import { redirect } from "next/navigation";
 import { toast } from "react-toastify";
+import { FcGoogle } from "react-icons/fc";
 
 const RegisterPage = () => {
     const onSubmit = async(e) => {
@@ -27,7 +28,14 @@ const RegisterPage = () => {
         toast.error('Registration is Error');
     }
     
+   
   };
+   const handleGoogleSignIn=async()=>{
+        await authClient.signIn.social({
+            provider:"google"
+        })
+    }
+
     return (
         <div>
              <div className="md:max-w-6/12 mx-auto px-3 py-7 shadow-[0_10px_30px_rgba(0,0,0,0.2)] my-7 rounded-lg">
@@ -105,7 +113,7 @@ const RegisterPage = () => {
                         </Button>
                     </div>
                     <p className="text-center font-medium text-3xl text-fuchsia-900">OR</p>
-                    <Button  variant="outline" className={'w-full mb-4 text-fuchsia-900 border-fuchsia-900'}>Register With Google</Button>
+                    <Button onClick={handleGoogleSignIn}  variant="outline" className={'w-full mb-4 text-fuchsia-900 border-fuchsia-900'}><FcGoogle size={24} />Register With Google</Button>
                    
                 </Form>
                 

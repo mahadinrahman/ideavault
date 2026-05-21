@@ -1,15 +1,27 @@
+import AlComments from '@/components/AlComments';
+import Comment from '@/components/Comment';
+import { auth } from '@/lib/auth';
+import { headers } from 'next/headers';
+
 import React from 'react';
+
 
 const DetailsPage = async({params}) => {
     const {id}=await params;
+     
+      
 
     const res =await fetch(`http://localhost:5000/idea/${id}`);
     const data=await res.json();
     
-    return (
-        <div className='md:max-w-7/12 mx-auto'>
+    const response =await fetch(`http://localhost:5000/comment/${id}`);
+    const datas=await response.json();
+    console.log(datas);
+
+   return (
+        <div className='md:max-w-7/12 mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.2)] rounded-xl mt-7 p-6'>
             <h2 className='text-center text-3xl font-bold text-fuchsia-900 pt-5'>Delaits Page</h2>
-            <div className='mt-7 p-6 shadow-[0_10px_30px_rgba(0,0,0,0.2)] rounded-xl'>
+            <div className='mt-5 p-6  '>
             
             <img src={data.imageURL} alt="" className='rounded-lg'/>
             
@@ -22,6 +34,10 @@ const DetailsPage = async({params}) => {
              <p className='pb-4'>{data.proposedSolution}</p>
             
             </div>
+
+             <p className='text-lg text-fuchsia-900 font-semibold  ml-4 md:ml-6'>Create a comment:</p>
+            <Comment id={data._id} ></Comment>
+            <AlComments datas={datas} ></AlComments>
         </div>
     );
 };
