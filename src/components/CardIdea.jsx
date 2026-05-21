@@ -6,8 +6,8 @@ const CardIdea = ({data}) => {
     return (
         <div>
             <div className='p-5  shadow-[0_10px_30px_rgba(0,0,0,0.2)] h-full rounded-xl'>
-                <div className="w-[330px] h-[250px] overflow-hidden">
-                <img src={data.imageURL} alt="" className='w-full h-full rounded-lg'/>
+                <div className=" md:h-[250px] overflow-hidden mx-auto">
+                <img src={data.imageURL} alt="" className=' h-full rounded-lg'/>
                 </div>
                   
             <p className='px-2 border-2 rounded-full w-23 text-center py-0.5 text-fuchsia-900 border-fuchsia-900 mt-3'>{data.category}</p>

@@ -1,15 +1,26 @@
 'use client'
 
+import { authClient } from "@/lib/auth-client";
 import { redirect } from "next/navigation";
 import { toast } from "react-toastify";
 
 const AddIdeas = () => {
+
+    const {
+            data: session,
+        } = authClient.useSession()
+        const user = session?.user;
+        // console.log(user);
 
     const onSubmit=async(e)=>{
       e.preventDefault();
     const formData =new FormData(e.currentTarget);
     const idea =Object.fromEntries(formData.entries());
    
+   const ideaData={
+      ...idea,
+      userEmail:user?.email,
+   }
 
     const res=await fetch('http://localhost:5000/idea',{
          method:'POST',
@@ -17,7 +28,7 @@ const AddIdeas = () => {
         'content-type':'application/json',
        
       },
-      body:JSON.stringify(idea)
+      body:JSON.stringify(ideaData)
     })
     const data=await res.json();
     if(res.ok){

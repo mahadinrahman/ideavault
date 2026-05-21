@@ -17,15 +17,15 @@ const MyInteractions = async() => {
     
     return (
         <div>
-            <h3>My Interactions</h3>
+            <h3 className='text-3xl text-center text-fuchsia-900 font-bold mt-5'>My Interactions</h3>
             {
                 datas.map(data=><div key={data._id}>
-            
+            <div className='max-w-11/12 mx-auto'>
             <div className=' shadow-[0_10px_30px_rgba(0,0,0,0.2)] rounded-xl mt-7 px-6 py-2'>
                 <p className='text-blue-500'><small>{user?.name}</small></p>
                  <p className='text-fuchsia-800 py-2 text-xl'>{data.comment}</p>
                  <p><small>  {new Date(data.createdAt).toLocaleString()}</small></p>
-
+            </div>
             </div>
         </div>)
             }

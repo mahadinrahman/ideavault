@@ -23,10 +23,10 @@ const DetailsPage = async({params}) => {
             <h2 className='text-center text-3xl font-bold text-fuchsia-900 pt-5'>Delaits Page</h2>
             <div className='mt-5 p-6  '>
             
-            <img src={data.imageURL} alt="" className='rounded-lg'/>
+            <img src={data.imageURL} alt="" className='rounded-lg w-full'/>
             
             <p className='px-2 border-2 rounded-full w-23 text-center py-0.5 text-fuchsia-900 border-fuchsia-900 mt-3'>{data.category}</p>
-            <h3 className='pt-2 text-2xl text-fuchsia-900 font-bold'>{data.title}</h3>
+            <h3 className='pt-2 text-2xl text-fuchsia-900 font-bold'>{data?.title}</h3>
             
             <p className='py-2'>{data.detailedDescription}</p>
              <p className='font-semibold'>Budget:${data.estimatedBudget}</p>
