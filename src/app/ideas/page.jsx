@@ -1,6 +1,7 @@
 import CardIdea from '@/components/CardIdea';
 import React from 'react';
 
+
 const Ideas = async() => {
     const res= await fetch('http://localhost:5000/idea');
     const datas=await res.json();

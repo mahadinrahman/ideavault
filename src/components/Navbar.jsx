@@ -97,9 +97,9 @@ const Navbar = () => {
                                             <Dropdown.Menu onAction={(key) => console.log(`Selected: ${key}`)}>
                                                 <Dropdown.Section>
 
-                                                    <Dropdown.Item id="new-file" textValue="New file">
+                                                    <Dropdown.Item id="new-file" textValue="Profile">
 
-                                                       <Link href="/profile" className={' text-center text-fuchsia-900 font-bold'}>Profile</Link>
+                                                       <Link href="/profile" className={' text-center text-fuchsia-900 font-bold'}><Button variant="outline" className={'md:w-50 rounded-none'}>Profile</Button></Link>
 
                                                     </Dropdown.Item>
                                                     <Dropdown.Item id="edit-file" textValue="Edit file">
