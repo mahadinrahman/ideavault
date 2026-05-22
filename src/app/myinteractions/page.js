@@ -11,8 +11,15 @@ const MyInteractions = async() => {
      console.log(session);
     const user=session?.user;
 
+            const {token}=await auth.api.getToken({
+                headers:await headers()
+            })
 
-     const res=await fetch(`http://localhost:5000/my-comments/${user?.email}`)
+     const res=await fetch(`http://localhost:5000/my-comments/${user?.email}`,{
+            headers:{
+                                authorization :`Bearer ${token}`
+                            }
+     })
     const datas= await res.json();
     console.log(datas);
     
