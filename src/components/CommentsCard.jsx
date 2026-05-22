@@ -33,7 +33,7 @@ const CommentsCard = ({ data }) => {
 
     const handleDelete = async () => {
 
-        const res = await fetch(`http://localhost:5000/comment/${data._id}`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/comment/${data._id}`, {
             method: "DELETE",
             headers: {
                 "content-type": "application/json"

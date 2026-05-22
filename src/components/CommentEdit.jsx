@@ -23,7 +23,7 @@ const CommentEdit = ({ data }) => {
         const edit = Object.fromEntries(formData.entries());
 
 
-        const res = await fetch(`http://localhost:5000/comment/${data._id}`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/comment/${data._id}`, {
 
             method: 'PATCH',
             headers: {

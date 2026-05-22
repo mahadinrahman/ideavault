@@ -15,7 +15,7 @@ const MyInteractions = async() => {
                 headers:await headers()
             })
 
-     const res=await fetch(`http://localhost:5000/my-comments/${user?.email}`,{
+     const res=await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/my-comments/${user?.email}`,{
             headers:{
                                 authorization :`Bearer ${token}`
                             }

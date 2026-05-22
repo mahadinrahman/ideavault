@@ -14,14 +14,14 @@ const DetailsPage = async({params}) => {
     })
       
 
-    const res =await fetch(`http://localhost:5000/idea/${id}`,{
+    const res =await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/idea/${id}`,{
         headers:{
             authorization :`Bearer ${token}`
         }
     });
     const data=await res.json();
     
-    const response =await fetch(`http://localhost:5000/comment/${id}`);
+    const response =await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/comment/${id}`);
     const datas=await response.json();
     console.log(datas);
 

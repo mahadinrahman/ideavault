@@ -14,7 +14,7 @@ const EditCard = ({data}) => {
     const update=Object.fromEntries(formData.entries());
     console.log(update);
 
-    const res=await fetch(`http://localhost:5000/my-ideas/${data._id}`,{
+    const res=await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/my-ideas/${data._id}`,{
 
        method:'PATCH',
       headers:{

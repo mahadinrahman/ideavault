@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 
 const Feature = async() => {
-    const res=await fetch('http://localhost:5000/feature');
+    const res=await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/feature`);
     const datas=await res.json();
 
     return (
