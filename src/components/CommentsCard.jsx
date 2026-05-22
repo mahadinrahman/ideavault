@@ -37,6 +37,8 @@ const CommentsCard = ({ data }) => {
         if (res.ok) {
             toast.success("Deleted!");
             router.refresh();
+        }else{
+            toast.error("Deleted is wrong!");
         }
 
     };

@@ -113,7 +113,7 @@ const Feature1 = () => {
           viewport={{ once: true }}
           className="text-center mt-20"
         >
-          <Link href={'/register'}><button className="px-8 py-4 rounded-2xl bg-fuchsia-900  text-white font-semibold shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300">
+          <Link href={'/addideas'}><button className="px-8 py-4 rounded-2xl bg-fuchsia-900  text-white font-semibold shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300">
             Join The Innovation Hub 🚀
           </button></Link>
         </motion.div>

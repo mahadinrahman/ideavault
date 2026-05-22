@@ -43,6 +43,8 @@ const CommentEdit = ({ data }) => {
         if (res.ok) {
             toast.success("Edit is successfully done!");
             router.refresh();
+        }else{
+            toast.error("Edit is error!"); 
         }
 
     }

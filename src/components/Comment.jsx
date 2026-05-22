@@ -39,12 +39,12 @@ const Comment = ({id}) => {
 
         if(res.ok){
             toast.success('Your comment is posted!')
-          
+              redirect(`/ideas/${id}`);
 
         }else{
             toast.error('comment is not posted ')
         }
-          redirect(`/ideas/${id}`);
+         
     }
     return (
         <div>

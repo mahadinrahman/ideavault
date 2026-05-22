@@ -33,11 +33,12 @@ const AddIdeas = () => {
     const data=await res.json();
     if(res.ok){
         toast.success('Your idea is Submitted!')
+        redirect('/ideas');
     }else{
         toast.error('Idea is not submitted ')
     }
 
-    redirect('/ideas');
+    
    
     
     }
