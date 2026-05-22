@@ -77,13 +77,13 @@ const Feature1 = () => {
               transition={{ duration: 0.5, delay: index * 0.15 }}
               viewport={{ once: true }}
               whileHover={{ y: -8 }}
-              className="group relative p-8 rounded-3xl bg-white/80 backdrop-blur-xl border border-white shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="group relative p-8 rounded-3xl  backdrop-blur-xl border border-white  shadow-[0_10px_30px_rgba(0,0,0,0.2)]  hover:shadow-xl transition-all duration-300"
             >
               
               {/* Glow Effect */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple-100/40 to-blue-100/40 opacity-0 group-hover:opacity-100 transition"></div>
+              <div className="absolute inset-0 rounded-3xl  bg-gradient-to-r from-purple-100/40 to-blue-100/40 opacity-0 group-hover:opacity-100 transition"></div>
 
-              <div className="relative z-10">
+              <div className="relative z-10 ">
                 
                 <div className="w-16 h-16 flex items-center justify-center rounded-2xl bg-gray-100 mb-6 mx-auto">
                   {item.icon}
@@ -93,7 +93,7 @@ const Feature1 = () => {
                   {item.number}
                 </h3>
 
-                <h4 className="mt-3 text-center text-xl font-semibold text-gray-800">
+                <h4 className="mt-3 text-center text-xl text-fuchsia-900 font-semibold ">
                   {item.title}
                 </h4>
 

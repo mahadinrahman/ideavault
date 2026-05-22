@@ -43,9 +43,9 @@ const CommentsCard = ({ data }) => {
 
 
     return (
-        <div>
+        <div className='max-w-11/12 mx-auto'>
 
-            <div className=' shadow-[0_10px_30px_rgba(0,0,0,0.2)] rounded-xl mt-7 px-6 py-2'>
+            <div className=' shadow-[0_10px_30px_rgba(0,0,0,0.2)] border-2 border-white rounded-xl mt-7 px-6 py-2'>
                 <div className='flex justify-between'>
                     <div>
                         <p className='text-blue-500'><small>{data.userName}</small></p>

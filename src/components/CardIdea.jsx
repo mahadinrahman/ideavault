@@ -5,7 +5,7 @@ import React from 'react';
 const CardIdea = ({data}) => {
     return (
         <div>
-            <div className='p-5  shadow-[0_10px_30px_rgba(0,0,0,0.2)] bg-gradient-to-r from-white to-gray-50 h-full rounded-xl'>
+            <div className='p-5  shadow-[0_10px_30px_rgba(0,0,0,0.2)] border-2 border-white h-full rounded-xl'>
                 <div className=" md:h-[250px] overflow-hidden mx-auto">
                 <img src={data.imageURL} alt="" className=' h-full rounded-lg'/>
                 </div>

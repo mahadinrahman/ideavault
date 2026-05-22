@@ -27,8 +27,8 @@ const Navbar = () => {
     return (
         <div>
             <nav className="sticky top-0 z-40 w-full border-b border-separator bg-background/70 backdrop-blur-lg">
-                <header className="flex h-16 items-center justify-between px-6">
-                    <div className="flex items-center gap-4">
+                <header className="flex h-16 items-center gap-3 justify-between px-6">
+                    <div className="flex items-center gap-2">
                         <button
                             className="md:hidden"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -83,7 +83,7 @@ const Navbar = () => {
                             <>
 
 
-                                <div className="flex gap-2">
+                                <div className="flex md:gap-2">
                                     <Avatar>
                                         <Avatar.Image referrerPolicy="no-referrer" alt="image" src={user?.image} />
                                         <Avatar.Fallback className="text-xl font-semibold text-fuchsia-900">{user?.name[0]}</Avatar.Fallback>
@@ -119,7 +119,7 @@ const Navbar = () => {
                             </>
                             :
                             <>
-                                <ul className=" items-center gap-4 flex">
+                                <ul className=" items-center md:gap-4 flex">
                                     <li>
                                         <Link href="/signin" className="no-underline"><Button variant="outline" className={pathname === "/signin" ? "bg-fuchsia-900 text-white font-bold " : "text-fuchsia-900 bg-white border-2 border-fuchsia-900 font-semibold "}>Sign In</Button></Link>
                                     </li>

@@ -28,7 +28,7 @@ const SignIn = () => {
       };
     return (
         <div>
-            <div className="md:max-w-6/12 mx-auto px-3 py-7 shadow-[0_10px_30px_rgba(0,0,0,0.2)] my-7 rounded-lg">
+            <div className="md:max-w-6/12 mx-auto px-3 py-7 border-2 border-white shadow-[0_10px_30px_rgba(0,0,0,0.2)] my-7 rounded-lg">
                            <Form className="flex w-96 flex-col gap-4 mx-auto" onSubmit={onSubmit}>
                                <h2 className="text-center text-3xl font-bold my-4 text-fuchsia-900">Please Sign In</h2>
                               

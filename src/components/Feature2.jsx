@@ -41,11 +41,11 @@ const Feature2 = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
             viewport={{ once: true }}
-            className="p-8 bg-gradient-to-r from-white to-gray-50 rounded-2xl shadow-md border hover:shadow-xl transition text-center"
+            className="p-8 border-2 border-white rounded-2xl  shadow-[0_10px_30px_rgba(0,0,0,0.2)]  hover:shadow-2xl transition text-center"
           >
             <div className="flex justify-center mb-4">{step.icon}</div>
             <h3 className="text-xl text-center font-bold mb-2 text-fuchsia-900 leading-tight">{step.title}</h3>
-            <p className="text-gray-600">{step.desc}</p>
+            <p className="text-gray-500">{step.desc}</p>
           </motion.div>
         ))}
       </div>

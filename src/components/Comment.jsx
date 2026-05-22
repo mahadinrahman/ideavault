@@ -54,7 +54,7 @@ const Comment = ({id}) => {
                             name='comment'
                             required
                             placeholder="Please create a comment..."
-                            className="w-11/12 ml-4 md:ml-6 text-gray-500  border border-gray-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-fuchsia-800"
+                            className="w-11/12 ml-4 md:ml-6 shadow-[0_10px_30px_rgba(0,0,0,0.2)] text-gray-500  border-2 border-white rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-fuchsia-800"
             ></textarea>
     
              <button

@@ -11,7 +11,7 @@ const MyInteractions = async() => {
     const user=session?.user;
 
 
-     const res=await fetch(`http://localhost:5000/my-comments/${user.email}`)
+     const res=await fetch(`http://localhost:5000/my-comments/${user?.email}`)
     const datas= await res.json();
     console.log(datas);
     
@@ -21,7 +21,7 @@ const MyInteractions = async() => {
             {
                 datas.map(data=><div key={data._id}>
             <div className='max-w-11/12 mx-auto'>
-            <div className='bg-gradient-to-r from-white to-gray-50 shadow-[0_10px_30px_rgba(0,0,0,0.2)] rounded-xl mt-7 px-6 py-2'>
+            <div className='border-2 border-white shadow-[0_10px_30px_rgba(0,0,0,0.2)] rounded-xl mt-7 px-6 py-2'>
                 <p className='text-blue-500'><small>{user?.name}</small></p>
                  <p className='text-fuchsia-800 py-2 text-xl'>{data.comment}</p>
                  <p className='text-gray-500'><small>  {new Date(data.createdAt).toLocaleString()}</small></p>

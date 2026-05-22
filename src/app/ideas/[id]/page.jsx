@@ -19,7 +19,7 @@ const DetailsPage = async({params}) => {
     console.log(datas);
 
    return (
-        <div className='md:max-w-7/12 mx-auto bg-gradient-to-r from-white to-gray-50 shadow-[0_10px_30px_rgba(0,0,0,0.2)] rounded-xl mt-7 p-6'>
+        <div className='md:max-w-7/12 mx-auto border-2 border-white shadow-[0_10px_30px_rgba(0,0,0,0.2)] rounded-xl mt-7 p-6'>
             <h2 className='text-center text-3xl font-bold text-fuchsia-900 pt-5'>Delaits Page</h2>
             <div className='mt-5 p-6  '>
             

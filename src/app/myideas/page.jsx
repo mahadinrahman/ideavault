@@ -13,7 +13,7 @@ const MyIdeas = async () => {
     console.log(session);
     const user = session?.user;
 
-    const res = await fetch(`http://localhost:5000/my-ideas/${user.email}`)
+    const res = await fetch(`http://localhost:5000/my-ideas/${user?.email}`)
     const datas = await res.json();
     console.log(datas);
 

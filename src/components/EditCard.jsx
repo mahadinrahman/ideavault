@@ -37,7 +37,7 @@ const EditCard = ({data}) => {
     return (
         <div>
              <Modal>
-      <Button variant='outline' className={'w-full my-2'}>Edit</Button>
+      <Button variant='outline' className={'w-full my-2 text-fuchsia-900 border border-fuchsia-900'}>Edit</Button>
       <Modal.Backdrop>
         <Modal.Container placement="auto">
           <Modal.Dialog className="sm:max-w-md">
@@ -46,7 +46,7 @@ const EditCard = ({data}) => {
               <Modal.Icon className="bg-accent-soft text-accent-soft-foreground">
               <PencilToLine></PencilToLine>
               </Modal.Icon>
-              <Modal.Heading>Edit </Modal.Heading>
+              <Modal.Heading className="">Edit </Modal.Heading>
               
             </Modal.Header>
             <Modal.Body className="p-6">
