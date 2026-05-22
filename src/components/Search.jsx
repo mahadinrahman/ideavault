@@ -12,6 +12,8 @@ const Search = ({datas}) => {
     )
     setFilteredCards(result)
 
+    
+
     }
     return (
         <div>
