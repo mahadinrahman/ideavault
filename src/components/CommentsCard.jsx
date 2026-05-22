@@ -50,7 +50,7 @@ const CommentsCard = ({ data }) => {
                     <div>
                         <p className='text-blue-500'><small>{data.userName}</small></p>
                         <p className='text-fuchsia-800 py-2 text-xl'>{data.comment}</p>
-                        <p><small>  {new Date(data.createdAt).toLocaleString()}</small></p>
+                        <p className='text-gray-500'><small>  {new Date(data.createdAt).toLocaleString()}</small></p>
                     </div>
                   
                     <div className='space-x-2 flex items-center'>

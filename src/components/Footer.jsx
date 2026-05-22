@@ -86,7 +86,7 @@ const Footer = () => {
                         <div className='flex space-x-2'>
                         <Image src="/fb.png" alt="Facebook" width={32} height={32} className='rounded-full'/>
                         <Image src="/insta.png" alt="Instagram" width={32} height={32} className='rounded-full'/>
-                        <Image src="/x.png" alt="Twitter" width={32} height={32} className='rounded-full'/>
+                        <Image src="/x.png" alt="Twitter" width={32} height={32} className='rounded-full bg-white'/>
                         </div>
                     </div>
                     

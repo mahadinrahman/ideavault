@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 import { ArrowShapeDown, Bars, EllipsisVertical, Pencil, SquarePlus, TrashBin } from "@gravity-ui/icons";
 
+import ThemeToggle from "./ThemeToggle";
+
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -75,6 +77,7 @@ const Navbar = () => {
                             <Link href="/addideas" className={` ${pathname === "/addideas" ? "font-bold text-fuchsia-900" : ""}`}>Add Ideas</Link>
                         </li>
                     </ul>
+                    <div className="flex gap-2">
                     {
                         user ?
                             <>
@@ -96,7 +99,7 @@ const Navbar = () => {
 
                                                     <Dropdown.Item id="new-file" textValue="New file">
 
-                                                        <Button className={'rounded-none w-full'} variant="outline">Profile</Button>
+                                                       <Link href="/profile" className={' text-center text-fuchsia-900 font-bold'}>Profile</Link>
 
                                                     </Dropdown.Item>
                                                     <Dropdown.Item id="edit-file" textValue="Edit file">
@@ -126,6 +129,8 @@ const Navbar = () => {
                                 </ul>
                             </>
                     }
+                   <ThemeToggle></ThemeToggle>
+                    </div>
 
                 </header>
                 {isMenuOpen && (
