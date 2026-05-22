@@ -9,9 +9,16 @@ import React from 'react';
 const DetailsPage = async({params}) => {
     const {id}=await params;
      
+    const {token}=await auth.api.getToken({
+        headers:await headers()
+    })
       
 
-    const res =await fetch(`http://localhost:5000/idea/${id}`);
+    const res =await fetch(`http://localhost:5000/idea/${id}`,{
+        headers:{
+            authorization :`Bearer ${token}`
+        }
+    });
     const data=await res.json();
     
     const response =await fetch(`http://localhost:5000/comment/${id}`);
