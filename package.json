@@ -6,6 +6,8 @@
   "dependencies": {
     "@heroui/react": "^3.0.5",
     "@heroui/styles": "^3.0.5",
+    "@react-aria/collections": "^3.1.0",
+    "@react-aria/utils": "^3.34.0",
     "@tailwindcss/vite": "^4.3.0",
     "acorn": "^8.16.0",
     "acorn-jsx": "^5.3.2",
