@@ -7,6 +7,7 @@ import { authClient } from "@/lib/auth-client";
 import { ArrowShapeDown, Bars, EllipsisVertical, Pencil, SquarePlus, TrashBin } from "@gravity-ui/icons";
 
 import ThemeToggle from "./ThemeToggle";
+import { toast } from "react-toastify";
 
 
 const Navbar = () => {
@@ -21,8 +22,15 @@ const Navbar = () => {
     // console.log(user);
 
     const handleSignOut=async()=>{
-       await authClient.signOut();
+       try {
+    await authClient.signOut();
+
+    toast.success('Sign out successful');
+  } catch (error) {
+    toast.error('Something went wrong');
+  }
     }
+    
 
     return (
         <div>

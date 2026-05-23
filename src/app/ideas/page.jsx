@@ -5,7 +5,9 @@ import React from 'react';
 
 
 const Ideas = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/idea`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/idea`,{
+        cache:"no-store"
+    });
     const datas = await res.json();
 
 //     const category = searchParams?.category;
@@ -20,7 +22,7 @@ const Ideas = async () => {
             <h3 className='text-center text-4xl font-bold text-fuchsia-900 mt-10'>Get  Ideas</h3>
             <p className='text-center text-gray-500'>Get feedbacks,comments and improves your ideas together</p>
             <div className=''>
-            <Category datas={datas}></Category>
+            {/* <Category datas={datas}></Category> */}
             <Search datas={datas}></Search>
            </div>
             {/* <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-10'>

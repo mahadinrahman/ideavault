@@ -1,5 +1,5 @@
-################################################################
-*** Project README*********
+
+*** Project README ***
 
 **Project Name :IdeaVault
 
@@ -7,7 +7,8 @@
 
  IdeaVault is a web-based platform where innovators, entrepreneurs, and creative  thinkers can share startup ideas, explore community-driven concepts, and collaborate through discussions and feedback. The platform is designed to encourage creativity, idea validation, and meaningful engagement among users.
 
-Live site:
+Live site:https://ideavault-gold.vercel.app
+Live site(server):https://ideavault-server-ashen.vercel.app
  
 ✨ Key Features
 
